@@ -1,17 +1,15 @@
-function Info(props) {
+function Info({ isLoggedIn }) {
+let message;
 
-    return (
-    <>
-    <h3>Welcome back {props.name}. It's good to have you!</h3>
-    
-<p>Please, confirm that your profession is {props.profession}</p>
-
-<p>Price: {props.price}</p>
-<p>Availability Status: {props.isAvailable ? "Yes" : "No"}</p>
-
-    </>
-    )
-
+if(isLoggedIn) {
+    message = "Welcome back. It's good to have you!"
+} else {
+    message = "Welcome, Guest"
 }
+    return (
+<>
+<h1>{message}</h1>
+</>
 
-export default Info
+)}
+export default Info;
