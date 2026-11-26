@@ -1,16 +1,19 @@
 import { useState } from "react";
 
-function Counter() {
+function Counter () {
+const [isLoggedIn, setIsLoggedIn] = useState(true)
 
-    const [count, setCount] = useState(0);
-
-    return (
+ return (
 
         <>
-        <h1>Count: {count}</h1>
-        <button onClick={() => setCount(count + 1)}>Increase Count</button>
+       <button onClick={() => setIsLoggedIn(!isLoggedIn)}>Learn more</button>
+                {isLoggedIn && <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, iste at. Quod, aliquam!</p>}
+
+        
         </>
     )
 }
+
+   
 
 export default Counter
