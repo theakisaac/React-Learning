@@ -1,5 +1,5 @@
 import Info from "./Info"
-
+import Counter from "./Counter"
 
 function App() {
 
@@ -7,6 +7,7 @@ function App() {
     <>
     
       <Info isLoggedIn={true}/>
+      <Counter />
 
     </>
   )
