@@ -1,19 +1,18 @@
 import { useState } from "react";
 
-function Counter () {
-const [isLoggedIn, setIsLoggedIn] = useState(true)
+function Counter() {
+const [name, setName] = useState("")
 
- return (
-
+function handleInputName(event) {
+    setName(event.target.value)
+}
+    return (
         <>
-       <button onClick={() => setIsLoggedIn(!isLoggedIn)}>Learn more</button>
-                {isLoggedIn && <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, iste at. Quod, aliquam!</p>}
-
-        
+        <input type="text" onChange={handleInputName} value={name} placeholder="Enter your name" />
+        <p>Your response: {name}</p>
         </>
     )
+
 }
 
-   
-
-export default Counter
+export default Counter;
