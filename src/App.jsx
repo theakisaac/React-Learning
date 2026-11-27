@@ -1,6 +1,7 @@
 import Info from "./Info";
 import Counter from "./Counter";
-import ContactForm from "./ContactForm"
+import ContactForm from "./ContactForm";
+import Testing from "./Testing"
 
 function App() {
 
@@ -10,6 +11,7 @@ function App() {
       <Info isLoggedIn={true}/>
       <Counter />
       <ContactForm />
+      <Testing />
 
     </>
   )
