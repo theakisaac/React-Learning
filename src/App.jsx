@@ -1,5 +1,6 @@
-import Info from "./Info"
-import Counter from "./Counter"
+import Info from "./Info";
+import Counter from "./Counter";
+import ContactForm from "./ContactForm"
 
 function App() {
 
@@ -8,6 +9,7 @@ function App() {
     
       <Info isLoggedIn={true}/>
       <Counter />
+      <ContactForm />
 
     </>
   )
