@@ -1,26 +1,26 @@
-function Testing() {
-   const trips = [
 
-    { id: 1, name: "Zanzibar", available: true },
-    { id: 2, name: "Kenya", available: false },
-    { id: 3, name: "Maldives", available: true },
+function Testing({title, trips}) {
 
-  ];
-
-  const listedTrips = trips.map((trip) => {
+const listedTrips = trips.map((trip) => {
     return (
         <li key={trip.id}>
-            {trip.name} - {trip.available ? "Trip is available for booking!" : "Sorry, fully booked!"}
+            {trip.destination} - #{trip.price.toLocaleString("en-NG")}
         </li>
     )
-  });
-  
-  return (
-    <>
-     <ul> {listedTrips}</ul>
-    </>
-   
-  )
+
+});
+
+
+    return (
+        <>
+        <h1>
+            {title}
+        </h1>
+        <ul>
+            {listedTrips}
+        </ul>
+        </>
+    )
 }
 
 export default Testing;
