@@ -1,29 +1,26 @@
 function Testing() {
-  const trips = [
-    { id: 1, name: "Zanzibar", price: 500 },
-    { id: 2, name: "Kenya", price: 700 },
-    { id: 3, name: "Maldives", price: 900 },
+   const trips = [
+
+    { id: 1, name: "Zanzibar", available: true },
+    { id: 2, name: "Kenya", available: false },
+    { id: 3, name: "Maldives", available: true },
+
   ];
 
-  const premiumTrips = trips.filter((trip) => trip.price > 500);
-  const selectedPremiumTrips = premiumTrips.map((premiumTrip) => {
+  const listedTrips = trips.map((trip) => {
     return (
-        
-            <li key={premiumTrip.id}>
-                {premiumTrip.name} - {premiumTrip.price}
-            </li>
-    
+        <li key={trip.id}>
+            {trip.name} - {trip.available ? "Trip is available for booking!" : "Sorry, fully booked!"}
+        </li>
     )
-  })
-
-
-  return(
-
-    <ul>
-        {selectedPremiumTrips}
-    
-    </ul>
-  );
+  });
+  
+  return (
+    <>
+     <ul> {listedTrips}</ul>
+    </>
+   
+  )
 }
 
-export default Testing
+export default Testing;
